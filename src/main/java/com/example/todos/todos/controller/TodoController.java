@@ -12,9 +12,10 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin
+@RequiredArgsConstructor
 @RestController
 @RequestMapping("/")
-@RequiredArgsConstructor
 public class TodoController {
 
     private final TodoService todoService;
@@ -61,13 +62,16 @@ public class TodoController {
     @DeleteMapping("/{id}")
     public ResponseEntity deleteTodo(@PathVariable("id") Long id){
         todoService.deleteToDo(id);
-        return new ResponseEntity(HttpStatus.NO_CONTENT);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
     @DeleteMapping
     public ResponseEntity deleteTodoList(){
         todoService.deleteToDoList();
-        return new ResponseEntity(HttpStatus.NO_CONTENT);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
 }
+
+
+
