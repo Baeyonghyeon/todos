@@ -13,10 +13,6 @@ public record TodoDto(
         implements Serializable
 {
 
-    public static TodoDto of(long id, String title, Integer todoOrder, boolean completed) {
-        return new TodoDto(id, title, todoOrder, completed);
-    }
-
     public static TodoDto of(String title, Integer todoOrder, boolean completed) {
         return new TodoDto(null, title, todoOrder, completed);
     }
@@ -30,12 +26,4 @@ public record TodoDto(
         );
     }
 
-    public Todo toEntity(){
-        return Todo.of(
-                title,
-                todoOrder,
-                completed
-        );
-    }
 }
-

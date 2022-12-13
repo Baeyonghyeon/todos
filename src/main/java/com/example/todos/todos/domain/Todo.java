@@ -30,13 +30,4 @@ public class Todo {
         return new Todo(title, todoOrder, completed);
     }
 
-    public Todo toEntity(){
-        return Todo.of(
-                title,
-                todoOrder,
-                completed
-        );
-    }
-
-
 }

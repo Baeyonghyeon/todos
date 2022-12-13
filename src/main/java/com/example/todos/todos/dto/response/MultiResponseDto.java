@@ -13,4 +13,5 @@ public class MultiResponseDto<T> {
     public MultiResponseDto(List<T> data) {
         this.data = data;
     }
+
 }

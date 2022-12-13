@@ -1,4 +1,4 @@
-### POST 등록
+### POST 등록1
 POST http://localhost:8080/
 Content-Type: application/json
 
@@ -8,7 +8,7 @@ Content-Type: application/json
   "completed": false
 }
 
-### POST 등록
+### POST 등록2
 POST http://localhost:8080/
 Content-Type: application/json
 
@@ -17,7 +17,6 @@ Content-Type: application/json
   "todoOrder": 2,
   "completed": false
 }
-
 
 ### PATCH 등록
 PATCH http://localhost:8080/1
@@ -29,12 +28,11 @@ Content-Type: application/json
   "completed" : true
 }
 
-### 단일건수 get
+### 단일건수 GET
 GET http://localhost:8080/1
 
 ### 전체건수 GET
 GET http://localhost:8080
-
 
 ### 단일건수 DELETE
 DELETE http://localhost:8080/1

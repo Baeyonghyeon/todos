@@ -9,17 +9,6 @@ public record TodoRequestDto(
         boolean completed)
 
 {
-    public static TodoRequestDto of (String title, Integer todoOrder , boolean completed){
-        return new TodoRequestDto(title, todoOrder, completed);
-    }
-
-    public TodoDto toDto() {
-        return TodoDto.of(
-                title,
-                todoOrder,
-                completed
-        );
-    }
 
     public Todo toEntity() {
         return Todo.of(
@@ -28,4 +17,5 @@ public record TodoRequestDto(
                 completed
         );
     }
+
 }
