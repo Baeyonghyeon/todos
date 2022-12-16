@@ -71,4 +71,10 @@ public class TodoController {
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
+    @GetMapping("/homework")
+    public String homeworkTestView(){
+
+        return "To-do Application !";
+    }
+
 }
